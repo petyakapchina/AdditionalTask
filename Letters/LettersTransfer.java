@@ -27,9 +27,7 @@ public class LettersTransfer {
 			System.out.println("Inncorretc input!");
 
 		}
-		for (int index = 0; index < letters.letters.length; index++) {
-			System.out.print(letters.letters[index] + " ");
-		}
+		letters.printResult();
 		sc.close();
 	}
 }

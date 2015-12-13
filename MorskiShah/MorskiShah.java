@@ -15,7 +15,7 @@ public class MorskiShah {
 
 		int countMoves = 2;
 
-		while (countMoves <= 9){
+		while (countMoves <= 10){
 			System.out.println("Player 1: ");
 			player1Row = sc.nextInt();
 			player1Col = sc.nextInt();

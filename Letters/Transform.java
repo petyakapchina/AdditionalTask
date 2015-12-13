@@ -1,10 +1,12 @@
 
 public class Transform {
 
-	char[] letters;
+	char[] array;
+
 
 	Transform(String text) {
-		this.letters = text.toCharArray();
+		this.array = text.toCharArray();
+	
 	}
 	
 	 char [][] CreateTable (){
@@ -26,9 +28,9 @@ public class Transform {
 		int firstIndex = 0;
 		int secondIndex = 1;
 
-		for (int index = 1; index <= this.letters.length / 2; index++) {
-			char letter1 = this.letters[firstIndex];
-			char letter2 = this.letters[secondIndex];
+		for (int index = 1; index <= this.array.length / 2; index++) {
+			char letter1 = this.array[firstIndex];
+			char letter2 = this.array[secondIndex];
 			int rowLetter1 = 0;
 			int rowLetter2 = 0;
 			int colLetter1 = 0;
@@ -81,11 +83,13 @@ public class Transform {
 				letter1 = table[rowLetter1][colLetter2];
 				letter2 = table[rowLetter2][colLetter1];
 			}
-			this.letters[firstIndex] = letter1;
-			this.letters[secondIndex] = letter2;
+			this.array[firstIndex] = letter1;
+			this.array[secondIndex] = letter2;
 
 			firstIndex += 2;
 			secondIndex += 2;
+			
+		
 		}
 
 	}
@@ -96,9 +100,9 @@ public class Transform {
 		int firstIndex = 0;
 		int secondIndex = 1;
 
-		for (int index = 1; index <= this.letters.length / 2; index++) {
-			char letter1 = this.letters[firstIndex];
-			char letter2 = this.letters[secondIndex];
+		for (int index = 1; index <= this.array.length / 2; index++) {
+			char letter1 = this.array[firstIndex];
+			char letter2 = this.array[secondIndex];
 			int rowLetter1 = 0;
 			int rowLetter2 = 0;
 			int colLetter1 = 0;
@@ -151,13 +155,22 @@ public class Transform {
 				letter1 = table[rowLetter1][colLetter2];
 				letter2 = table[rowLetter2][colLetter1];
 			}
-			this.letters[firstIndex] = letter1;
-			this.letters[secondIndex] = letter2;
+			this.array[firstIndex] = letter1;
+			this.array[secondIndex] = letter2;
 
 			firstIndex += 2;
 			secondIndex += 2;
+			
+			
 		}
 
+	}
+	
+	void printResult (){
+		for ( int index=0; index<this.array.length; index++){
+			System.out.print(this.array[index]);
+		}
+			
 	}
 
 }
