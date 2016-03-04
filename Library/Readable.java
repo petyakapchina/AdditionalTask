@@ -1,10 +1,30 @@
 
 public interface Readable {
 
-	public String getName();
+	void addRecord(Record r, Client c);
 
-	public String getPublisher();
+	String getName();
 
-	public String getLibraryName();
+	String getPublisher();
+
+	String getLibraryName();
+
+	Library getLibrary();
+
+	Record getRecord();
+
+	GeneralCategory getCategory();
+
+	boolean isTaken();
+
+	void setFee(int newFee);
+
+	int getFee();
+
+	String getType();
+
+	String toString();
+
+	void setIsTaken(boolean is);
 
 }

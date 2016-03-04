@@ -2,24 +2,15 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Magazine extends Reading implements Comparable<Magazine> {
-	private MagaizneCategory category;
+	
 	private int numberOfIssue;
 	private Calendar dateOfIssue;
 
-	public Magazine(String name, String publisher, Calendar date, MagaizneCategory cat, int number, Library lib) {
-		super(name, publisher, lib);
-		this.setCategory(cat);
+	public Magazine(String name, String publisher, Calendar date, GeneralCategory cat, String type, int number, Library lib) {
+		super(name, publisher, lib, cat, type);
 		this.setDateOfIssue(date);
 		this.setNumberOfIssue(number);
-		getLibrary().addMagazine(this);
-	}
-
-	public MagaizneCategory getCategory() {
-		return category;
-	}
-
-	private void setCategory(MagaizneCategory category) {
-		this.category = category;
+		
 	}
 
 	public int getNumberOfIssue() {
@@ -54,6 +45,12 @@ public class Magazine extends Reading implements Comparable<Magazine> {
 			}
 		}
 		return 0;
+	}
+	
+	@Override
+	public void setFee(int newFee) {
+		super.setFee(0);
+		System.out.println("Free to use!");
 	}
 
 }
